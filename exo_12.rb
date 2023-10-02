@@ -1,15 +1,22 @@
-print "Quel est ton âge ? "
-age = gets.chomp.to_i
-today = 2023
-birthyear = today - age
-while birthyear <= today do
-  # We put x and y into whil cause y and x will change with every loop
-  x = today - birthyear
-  y = age - (x)
-  if x != y
-    puts "Il y a #{x} ans, tu avais #{y} ans"
-  else
-    puts "Il y a #{x} ans, tu avais la moitié de l'âge que tu as aujourd'hui."
+puts "Quelle est ton année de naissance ?"
+print "> "
+birth_year = gets.chomp.to_i
+
+#opposite function to downto
+birth_year.upto(2023) do |i|
+  age = i - birth_year
+  middle_age = (2023 - birth_year) / 2
+  if birth_year == i
+    puts "Il y a #{2023-i} ans, tu es né.e." #pour personnaliser le message l'année de naissance
+  elsif (birth_year + 1) == i
+    puts "Il y a #{2023 - i} ans, tu avais 1 an." #pour personnaliser 1 an
+  elsif i == 2023
+    puts "Cette année, tu as #{2023 - birth_year} ans." #pour mettre au présente uniquement sur l'année 2023
+  elsif i == 2022
+    puts "Il y a 1 an, tu avais #{i - birth_year} ans." #pour personnaliser 1 an
+  elsif i == (birth_year + middle_age)
+    puts "Il y a #{middle_age + 1} ans, tu avais la moitié de l'âge que tu as aujourd'hui"
+  else #toutes les autres options
+    puts "Il y a #{2023 - i} ans, tu avais #{i - birth_year} ans."
   end
-  birthyear += 1
 end
