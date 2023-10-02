@@ -1,14 +1,8 @@
-print "Entrez un nombre : "
-num = gets.chomp.to_i
-while num >= 0
-  puts num
-  num -= 1
+puts "Écris-moi un chiffre de ton choix"
+print "> "
+number = gets.chomp.to_i
+
+#downto function is used to reverse count until a define number, here it'll be 0
+number.downto(0) do |i|
+  puts i  
 end
-
-# We can also do in line 3 
-
-# 3. number.downto (0) do |index|
-# 4.  puts index
-# 5. end
-
-# Here "downto" means you will go from XX number to 0.
