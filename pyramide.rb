@@ -1,25 +1,17 @@
-puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?"
-print "> "
-number = gets.chomp.to_i
+puts "Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?" #à l'extérieur de la boucle pour ne pas le répéter plusieurs fois
 
-if number >= 1 && number <= 25
-  puts "Voici la pyramide :"
-  i = 1
-  while i <= number do
-    puts " " * (number - i) + "#" * i #comme en maths les multiplications sont prioritaires
-    i += 1
-  end
-else
-  puts "Il me faut un nombre compris entre 1 et 25, recommence :"
+loop do #pour créer une boucle infini, ainsi tant que la personne n'a pas entré un chiffre entre 1 et 25, la boucle recommence
   print "> "
-  number_2 = gets.chomp.to_i
-  if number_2 >= 1 && number_2 <= 25
-    j = 1
-    while j <= number_2 do 
-      puts " " * (number_2 - j) + "#" * j
-      j += 1
+  number = gets.chomp.to_i
+  if number >= 1 && number <= 25
+    puts "Voici la pyramide :"
+    i = 1
+    while i <= number do
+      puts " " * (number - i) + "#" * i #comme en maths les multiplications sont prioritaires
+      i += 1
     end
+    break #la condition est respectée, l'user sort de la boucle
   else
-    puts "Encore raté ! Bye Bye..."
+    puts "Il me faut un nombre compris entre 1 et 25, recommence Tête de cul :"
   end
 end
