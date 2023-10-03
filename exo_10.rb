@@ -4,7 +4,6 @@ birth_year = gets.chomp.to_i
 
 #opposite function to downto
 birth_year.upto(2023) do |i|
-  age = i - birth_year
   if birth_year == i
     puts "En #{i}, tu es né.e." #pour personnaliser le message l'année de naissance
   elsif i == 2023
