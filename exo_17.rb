@@ -16,11 +16,11 @@ else
   print "> "
   number_bis = gets.chomp.to_i
   if number_bis >= 1 && number_bis <= 25
-    puts "Voici ta pyramide de merde :"
+    puts "Comme tu t'es trompé une première fois, tu as le droit à une pyramide de merde :"
     i_bis = 1
     j_bis = number_bis * 2
     while i_bis <= j_bis  do
-      spaces_bis = (j_bis - i_bis) / 2
+      spaces_bis = (j_bis - i_bis)
       puts " " * spaces_bis + "\u{1F4A9}" * i_bis
       i_bis += 2 
     end
